@@ -1,95 +1,96 @@
-object colores {
+// trabajo en clase
 
-  const fuertes = ["Rojo", "Verde"]
-
-  const suaves = ["celeste", "pardo"]
-
-  method get_color_fuerte(numero) {
-    return fuertes.get(numero)
-  }
-
-  method get_color_suave(numero) {
-    return suaves.get(numero)
-  }
+// colores
+object rojo {
+  method esFuerte() = true 
 }
 
-object materiales {
+object verde {
+  method esFuerte() = true 
+}
 
-  const brillantes = ["cobre", "vidrio"]
+object celeste {
+  method esFuerte() = false 
+}
 
-  const comunes = ["lino", "madera", "cuero"]
+object pardo {
+  method esFuerte() = false 
+}
 
-  method get_material_brillante(numero) {
-    return brillantes.get(numero)
-  }
 
-  method get_material_comun(numero) {
-    return comunes.get(numero)
-  }
+// materiales
+object cobre {
+  method brillante() = true
+}
+
+object vidrio {
+  method brillante() = true
+}
+
+object lino {
+  method brillante() = false
+}
+
+object madera {
+  method brillante() = false
+}
+
+object cuero {
+  method brillante() = false
 }
 
 object remera {
-
-  const color = colores.get_color_fuerte(0)
-
-  const material = materiales.get_material_comun(0)
-
-  const peso = 800
-
-  method queSoy() {
-    return "Soy una remera de color " + color + " hecho de " + material + " y peso " + peso + " gramos."
-  }
+  method color() = rojo
+  method material() = lino
+  method peso() = 800
 }
 
 object pelota {
-
-  const color = colores.get_color_suave(1)
-
-  const material = materiales.get_material_comun(2)
-
-  const peso = 1300
-
-  method queSoy() {
-    return "Soy una pelota de color " + color + " hecho de " + material + " y peso " + peso + " gramos."
-  }
+  method color() = pardo
+  method material() = cuero
+  method peso() = 1300
 }
 
 object biblioteca {
-
-  const color = colores.get_color_fuerte(1)
-
-  const material = materiales.get_material_comun(1)
-
-  const peso = 8000
+  method color() = verde
+  method material() = madera
+  method peso() = 8000
 }
 
 object muñeco {
-
-  const color = colores.get_color_suave(0)
-
-  const material = materiales.get_material_brillante(1)
-
-  var peso = 0
+  method color() = celeste
+  method material() = vidrio
+  method peso() = 0
 }
 
 object placa {
-
-  var color = ""
-
-  const material = materiales.get_material_brillante(0)
-
-  var peso = 0
+  method color() = celeste
+  method material() = cobre
+  method peso() = 0
 }
 
 
 
 
-/*
-Finalmente, considerar (al menos) estos objetos:
 
-una remera roja de lino, pesa 800 gramos.
-una pelota parda de cuero, pesa 1300 gramos.
-una biblioteca verde de madera, pesa 8000 gramos.
-un muñeco celeste de vidrio, de peso variable.
-una placa de cobre, de peso y color variables.
-*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
