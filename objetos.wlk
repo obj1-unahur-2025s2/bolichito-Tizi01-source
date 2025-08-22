@@ -60,13 +60,35 @@ object biblioteca {
 object muñeco {
   method color() = celeste
   method material() = vidrio
-  method peso() = 0
+
+// setter
+  var peso = 1000
+  method peso(nuevoPeso) {
+    peso = nuevoPeso
+  }
+
+  //getter
+  method peso() = peso
 }
 
 object placa {
-  method color() = celeste
   method material() = cobre
-  method peso() = 0
+
+// setter
+  var color = null
+  method color(nuevoColor) {
+    color = nuevoColor
+  }
+
+// setter
+  var peso = 1000
+  method peso(nuevoPeso) {
+    peso = nuevoPeso
+  }
+
+  //getter
+  method color() = color
+  method peso() = peso
 }
 
 
