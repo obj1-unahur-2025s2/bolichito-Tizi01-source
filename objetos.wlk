@@ -1,7 +1,12 @@
 // trabajo en clase
 
 // colores
+
 object rojo {
+  method esFuerte() = true 
+}
+
+object naranja {
   method esFuerte() = true 
 }
 
@@ -19,6 +24,7 @@ object pardo {
 
 
 // materiales
+
 object cobre {
   method brillante() = true
 }
@@ -39,6 +45,8 @@ object cuero {
   method brillante() = false
 }
 
+// objetos
+
 object remera {
   method color() = rojo
   method material() = lino
@@ -57,7 +65,7 @@ object biblioteca {
   method peso() = 8000
 }
 
-object muñeco {
+object munieco {
   method color() = celeste
   method material() = vidrio
 
@@ -75,7 +83,7 @@ object placa {
   method material() = cobre
 
 // setter
-  var color = null
+  var color = rojo
   method color(nuevoColor) {
     color = nuevoColor
   }
@@ -91,7 +99,45 @@ object placa {
   method peso() = peso
 }
 
+object arito {
+  method color() = celeste
+  method material() = cobre
+  method peso() = 180
+}
 
+object banquito {
+  // setter
+  var color = naranja
+  method color(nuevoColor) {
+    color = nuevoColor
+  }
+
+  //getters
+  method color() = color
+  method material() = madera
+  method peso() = 1700
+}
+
+object cajita { 
+  method color() = rojo
+  method material() = cobre
+
+  // setter
+  var peso = 400
+  method peso(pesoObjetoAdentro) {
+    peso = peso + pesoObjetoAdentro.peso()
+    
+  }
+
+  var objetoAdentro = remera
+  method objetoAdentro(unObjeto) {
+    objetoAdentro = unObjeto
+  }
+
+  // getter
+  method peso() = peso
+  method objetoAdentro() = objetoAdentro
+}
 
 
 

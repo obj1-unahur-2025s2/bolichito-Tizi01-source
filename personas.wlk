@@ -14,6 +14,6 @@ object luisa {
 }
 
 object juan {
-  method leGusta(unObjeto) = (!unObjeto.color().esFuerte()) || (unObjeto.peso() >= 1200 && unObjeto.peso() <= 1800)
+  method leGusta(unObjeto) = !unObjeto.color().esFuerte() || unObjeto.peso().between(1200, 1800)
 }
 
